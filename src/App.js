@@ -10,11 +10,12 @@ function App() {
     }
     const DecreaseCount = () =>{
         console.log(count-1);
-         setCount(count-1);
+        if(count>0)
+          setCount(count-1);
     }
     return(
       <>
-      <div>
+      <div className='div'>
       <h1 className='number'>{count}</h1>
       <button onClick={IncreaseCount} className='buttons'>Increase</button> 
       <button onClick={DecreaseCount} className='buttons'>Decrease</button>
